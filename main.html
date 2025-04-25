@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFood-Food ordering Website</title>
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="Home">
+        <nav>
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Gallary">Gallery</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#Order">Order</a></li>
+            </ul>
+            <div class="icon">
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search dishes...">
+                    <button type="submit" id="search-btn" class="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <i class="fa-solid fa-heart"></i>
+                <button id="cart-toggle" class="cart-button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <i class="fa-solid fa-user" id="auth-toggle"></i>
+                <button id="logout-btn" class="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="men_text">
+                <h1>Get Fresh<span>Food</span><br>in a Easy Way</h1>
+            </div>
+            <div class="main_image">
+                <img src="main_img.png">
+            </div>
+        </div>
+        <p>Welcome to FOOD – your go-to spot for mouth-watering fast food and irresistible flavours! From cheesy pizzas and juicy burgers to spicy biryanis, creamy pastas, and indulgent ice creams, we've got something for every craving. Whether you're in the mood for a loaded hotdog or a refreshing glass of fresh juice, our restaurant serves up your favourites fast and fresh. Dive into taste, one bite at a time!</p>
+        <div class="main_btn">
+            <a href="#">Explore Dishes</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+    </section>
+
+    <!-- About -->
+    <div class="about" id="About">
+        <div class="about_main">
+            <div class="image">
+                <img src="Food-Plate.png">
+            </div>
+            <div class="about_text">
+                <h1><span>About</span>Us</h1>
+                <h3>Why Choose us?</h3>
+                <p>At FOOD, we don’t just serve food – we serve happiness on a plate! Here's why our customers keep coming back:</p>
+                <ul>
+                    <li><strong>Delicious Variety:</strong> From classic comfort food to international favourites, our menu is packed with something for everyone – pizzas, burgers, biryani, lasagna, ice creams, and more!</li>
+                    <li><strong>Fresh Ingredients:</strong> We use only the finest, freshest ingredients to prepare every meal, ensuring great taste and top quality in every bite.</li>
+                    <li><strong>Fast & Friendly Service:</strong> Whether dining in or ordering online, we pride ourselves on quick, reliable service with a smile.</li>
+                    <li><strong>Affordable Prices:</strong> Great food shouldn’t break the bank. Enjoy generous portions at prices that won’t hurt your wallet.</li>
+                    <li><strong>Clean & Comfortable Ambience:</strong> Enjoy your meal in a hygienic, welcoming setting – perfect for families, friends, or solo foodies.</li>
+                </ul>
+                <p>So why wait? Come taste the difference at BiteHub – where every meal is a celebration!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu" id="Menu">
+        <h1>Our<span>Menu</span></h1>
+        <div class="menu_box" id="menu-box">
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="buger.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Burger</h2>
+                    <p>A juicy burger with a grilled patty, fresh veggies, and our special sauce – the perfect bite!</p>
+                    <h3>$16.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Burger" data-price="16.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="pasta.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Pasta</h2>
+                    <p>Indulge in creamy, perfectly cooked pasta, tossed in rich sauce and topped with fresh ingredients – comfort in every bite!</p>
+                    <h3>$12.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Pasta" data-price="12.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="lasagna.webp">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Lasagna</h2>
+                    <p>Layers of rich, cheesy goodness, tender pasta, and savoury sauce – our lasagna is a hearty, comforting classic!</p>
+                    <h3>$18.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Lasagna" data-price="18.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="chocolate_Drink.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Milkshake</h2>
+                    <p>Decadent and creamy, our chocolate milkshake is the ultimate treat – chilled, thick, and loaded with rich chocolate!</p>
+                    <h3>$8.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Drink" data-price="8.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="pizza.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Pizza</h2>
+                    <p>Hot, cheesy, and loaded with toppings – our pizza is the perfect blend of crispy crust, savoury sauce, and melt-in-your-mouth cheese!</p>
+                    <h3>$16.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Pizza" data-price="16.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="Hot_dog.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Hot Dog</h2>
+                    <p>A juicy sausage in a soft bun, topped with mustard, ketchup, and all your favourite fixings – the ultimate snack!</p>
+                    <h3>$6.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Hot Dog" data-price="6.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="juse.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Juice</h2>
+                    <p>Fresh, refreshing, and packed with flavour – our juice is the perfect thirst-quencher, made with the juiciest fruits!</p>
+                    <h3>$8.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Juice" data-price="8.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="biryani.webp">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Biryani</h2>
+                    <p>Aromatic, flavorful, and perfectly spiced – our biryani is a delicious blend of tender rice, marinated meat, and exotic spices!</p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Biryani" data-price="20.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="chocolate.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Chocolate</h2>
+                    <p>Rich, smooth, and decadently sweet – our chocolate is a blissful indulgence for every chocolate lover!</p>
+                    <h3>$5.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Chocolate" data-price="5.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="ice_cream.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Ice Cream</h2>
+                    <p>Cool, creamy, and irresistibly sweet – our ice cream comes in a variety of flavours, perfect for satisfying your sweet cravings!</p>
+                    <h3>$12.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Ice Cream" data-price="12.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="Spanchi.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Cupcake</h2>
+                    <p>Soft, fluffy, and topped with creamy frosting – our cupcakes are the perfect sweet treat for any occasion!</p>
+                    <h3>$2.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Cupcake" data-price="2.00">Add to Cart</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="sandwich.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Sandwich</h2>
+                    <p>Fresh, crisp, and packed with flavour – our sandwich is the perfect combination of tasty fillings between two slices of soft bread!</p>
+                    <h3>$4.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn" data-item="Sandwich" data-price="4.00">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallary -->
+    <div class="gallary" id="Gallary">
+        <h1>Our<span>Gallery</span></h1>
+        <div class="gallary_image_box">
+            <div class="gallary_image">
+                <img src="gallary_1.jpg">
+                <h3>sandwiches</h3>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+            <div class="gallary_image">
+                <img src="gallary_2.jpg">
+                <h3>cakess</h3>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+            <div class="gallary_image">
+                <img src="gallary_3.jpg">
+                <h3>cupcakes</h3>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+            <div class="gallary_image">
+                <img src="gallary_4.jpg">
+                <h3>buns</h3>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+            <div class="gallary_image">
+                <img src="gallary_5.jpg">
+                <h3>pizzas</h3>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+            <div class="gallary_image">
+                <img src="gallary_6.jpg">
+                <h3>pancakes</h3>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review -->
+    <div class="review" id="Review">
+        <h1>Customer<span>Review</span></h1>
+        <div class="review_box">
+            <div class="review_card">
+                <div class="review_profile">
+                    <img src="review_1.png">
+                </div>
+                <div class="review_text">
+                    <h2 class="name">Elena</h2>
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <p>Absolutely loved the food here! The biryani was packed with flavour and the burger was juicy and satisfying. Great ambience and super quick service. Will definitely visit again!</p>
+                </div>
+            </div>
+            <div class="review_card">
+                <div class="review_profile">
+                    <img src="review_2.png">
+                </div>
+                <div class="review_text">
+                    <h2 class="name">Damon</h2>
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <p>The pasta and lasagna were delicious and creamy, just the way I like them. The staff was friendly and the place felt very clean and cosy. Great spot for a casual meal!</p>
+                </div>
+            </div>
+            <div class="review_card">
+                <div class="review_profile">
+                    <img src="review_3.png">
+                </div>
+                <div class="review_text">
+                    <h2 class="name">Clara</h2>
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <p>The best fast food joint in town! I tried the hotdog and chocolate milkshake – both were amazing. Perfect place to hang out with friends and enjoy some tasty bites.</p>
+                </div>
+            </div>
+            <div class="review_card">
+                <div class="review_profile">
+                    <img src="review_4.png">
+                </div>
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <p>Super impressed with the variety – from pizza to ice cream, everything tasted fresh and well-prepared. Loved the juice selection too. Highly recommend for families and foodies alike!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order -->
+    <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+        <div class="order_main">
+            <div class="order_image">
+                <img src="order_image.png">
+            </div>
+            <form id="order-form">
+                <div class="input">
+                    <p>Name</p>
+                    <input type="text" id="order-name" placeholder="Your name">
+                </div>
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" id="order-email" placeholder="Your email">
+                </div>
+                <div class="input">
+                    <p>Number</p>
+                    <input type="tel" id="order-number" placeholder="Your number">
+                </div>
+                <div class="input">
+                    <p>Quantity</p>
+                    <input type="number" id="order-quantity" placeholder="How many orders" readonly>
+                </div>
+                <div class="input">
+                    <p>Items</p>
+                    <input type="text" id="order-items" placeholder="Food name (pre-filled from cart)" readonly>
+                </div>
+                <div class="input">
+                    <p>Address</p>
+                    <input type="text" id="order-address" placeholder="Your address">
+                </div>
+                <div class="input">
+                    <p>Payment Method</p>
+                    <select id="payment-method" required>
+                        <option value="" disabled selected>Select payment method</option>
+                        <option value="cod">Cash on Delivery</option>
+                        <option value="upi">UPI</option>
+                    </select>
+                </div>
+                <button type="submit" class="order_btn">Order Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup-modal" class="popup-modal">
+        <div class="popup-content">
+            <span class="close-popup">×</span>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+
+    <!-- Team -->
+    <div class="team">
+        <h1>Our<span>Team</span></h1>
+        <div class="team_box">
+            <div class="profile">
+                <img src="chef1.png">
+                <div class="info">
+                    <h2 class="name">Chef Aarav Khanna</h2>
+                    <p class="bio">With over 15 years in the kitchen, Chef Aarav creates bold, flavourful dishes like our signature biryani and gourmet pizzas.</p>
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="profile">
+                <img src="chef2.png">
+                <div class="info">
+                    <h2 class="name">Chef Bonnie</h2>
+                    <p class="bio">Chef Bonnie is the mastermind behind our irresistible desserts, including decadent chocolate treats and creamy ice creams</p>
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="profile">
+                <img src="chef3.jpg">
+                <div class="info">
+                    <h2 class="name">Chef Krish</h2>
+                    <p class="bio">Chef Krish expertise shines through in our juicy burgers, hotdogs, and sizzling sandwiches, always packed with flavour.</p>
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="profile">
+                <img src="chef4.jpg">
+                <div class="info">
+                    <h2 class="name">Chef Anaya</h2>
+                    <p class="bio">Chef Anaya brings a modern twist to classic Italian dishes, from creamy pastas to cheesy lasagna..</p>
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Location</h2>
+                <p>Sri Lanka</p>
+                <p>USA</p>
+                <p>India</p>
+                <p>Japan</p>
+                <p>Italy</p>
+            </div>
+            <div class="footer_tag">
+                <h2>Quick Link</h2>
+                <p>Home</p>
+                <p>About</p>
+                <p>Menu</p>
+                <p>Gallary</p>
+                <p>Order</p>
+            </div>
+            <div class="footer_tag">
+                <h2>Contact</h2>
+                <p>+94 12 3456 789</p>
+                <p>+94 25 5568456</p>
+                <p>johndeo123@gmail.com</p>
+                <p>foodshop123@gmail.com</p>
+            </div>
+            <div class="footer_tag">
+                <h2>Our Service</h2>
+                <p>Fast Delivery</p>
+                <p>Easy Payments</p>
+                <p>24 x 7 Service</p>
+            </div>
+            <div class="footer_tag">
+                <h2>Follows</h2>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <p class="end">Design by<span><i class="fa-solid fa-face-grin"></i>Thapana Boora</span></p>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+        <button id="close-cart">Close</button>
+    </div>
+
+    <!-- Authentication Modal -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-content">
+            <span class="close-btn">×</span>
+            <h2>Sign In / Login</h2>
+            <div class="auth-tabs">
+                <button class="tab active" data-tab="sign-in">Sign In</button>
+                <button class="tab" data-tab="login">Login</button>
+            </div>
+            <div class="auth-forms">
+                <!-- Sign In Form -->
+                <form id="sign-in-form" class="auth-form">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit">Sign In</button>
+                </form>
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form" style="display: none;">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add to Cart Notification -->
+    <div id="cart-notification" class="cart-notification">Item added to cart!</div>
+
+    <script src="script5.js"></script>
+</body>
+</html>
